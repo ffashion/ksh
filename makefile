@@ -1,6 +1,6 @@
 cc = gcc
 OBJ = ksh
-AnddPREFIX=
+AnddPREFIX=/data/data/com.termux/usr
 termux:
 	gcc $(AnddPREFIX)/lib/libreadline.so -o $(AnddPREFIX)/bin/ksh
 all:
