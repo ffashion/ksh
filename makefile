@@ -2,7 +2,7 @@ cc = gcc
 OBJ = ksh
 AnddPREFIX=/data/data/com.termux/files/usr
 termux:
-	gcc $(AnddPREFIX)/lib/libreadline.so -o $(AnddPREFIX)/bin/ksh
+	gcc ksh.c $(AnddPREFIX)/lib/libreadline.so -o $(AnddPREFIX)/bin/ksh
 all:
 	$(cc) -c ./*.c 
 	$(cc) -o $(OBJ) ./*.o /usr/lib/x86_64-linux-gnu/libreadline.so -I -lreadlin -lncurses -g
