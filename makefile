@@ -1,12 +1,13 @@
 cc = gcc
 OBJ = ksh
+AnddPREFIX=
 termux:
-	$(cc) -c ./*.c
-	$(cc) -o $(OBJ) ./*.o $(PREFIX)/lib/libreadline.so -I -lreadline -lncurses -g
-	rm *.o
+	gcc $(AnddPREFIX)/lib/libreadline.so -o $(AnddPREFIX)/bin/ksh
 all:
 	$(cc) -c ./*.c 
 	$(cc) -o $(OBJ) ./*.o /usr/lib/x86_64-linux-gnu/libreadline.so -I -lreadlin -lncurses -g
 	rm *.o 
+install:
+	gcc ksh.c /usr/lib/x86_64-linux-gnu/libreadline.so -o /usr/bin/ksh
 clean:
 	rm *.o
