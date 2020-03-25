@@ -11,3 +11,7 @@ install:
 	gcc ksh.c /usr/lib/x86_64-linux-gnu/libreadline.so -o /usr/bin/ksh
 clean:
 	rm *.o
+
+remove:
+	rm -rf $(AnddPREFIX)/bin/ksh
+
